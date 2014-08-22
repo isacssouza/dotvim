@@ -1,16 +1,15 @@
+set nocompatible
 set encoding=utf-8
-
-" Sets how many lines of history VIM has to remember
-set history=700
-syntax enable
 
 " pathogen call
 execute pathogen#infect()
 call pathogen#helptags()
 
+" Sets how many lines of history VIM has to remember
+set history=700
+syntax enable
+
 " force filetype reload for pathogen
-filetype off
-filetype on
 filetype plugin on
 filetype indent on
 
