@@ -1,9 +1,11 @@
-set nocompatible
-set encoding=utf-8
-
-" pathogen call
+        " pathogen call
 execute pathogen#infect()
 call pathogen#helptags()
+
+runtime! plugin/sensible.vim
+
+set nocompatible
+set encoding=utf-8
 
 " Sets how many lines of history VIM has to remember
 set history=700
@@ -26,7 +28,7 @@ let g:yankring_max_element_length = 100000 " 100Kb
 map <leader>y :YRShow<CR>
 
 " show tabs and new lines
-set listchars=tab:>~,trail:~,extends:>,precedes:<
+"set listchars=tab:>~,trail:~,extends:>,precedes:<
 set list
 
 " File browser
@@ -323,11 +325,10 @@ map <leader>jh :JSHint %<CR>
 
 " enable
 let g:syntastic_check_on_open=0
-
 " open error list
 let g:syntastic_auto_loc_list=1
-
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_loc_list_height = 3
 
 map <leader>sc :SyntasticCheck<CR>
 
@@ -356,3 +357,16 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 nnoremap <leader>u :GundoToggle<CR>
 
 let g:UltiSnipsExpandTrigger="<s-tab>"
+
+" rainbow parenthesis
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" yankring
+let g:yankring_replace_n_pkey = '<leader>pp'
+let g:yankring_replace_n_nkey = '<leader>nn'
+
+set background=dark
+colorscheme railscasts
