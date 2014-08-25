@@ -171,14 +171,10 @@ map <leader>cft :silent execute "!coffeetags -R -f tags"<CR><C-L>
 map <leader>nt :NERDTreeToggle<CR>
 
 " window
-map <A-right> <C-w>l
-map <A-left> <C-w>h
-map <A-up> <C-w>k
-map <A-down> <C-w>j
-imap <A-right> <ESC><C-w>l
-imap <A-left> <ESC><C-w>h
-imap <A-up> <ESC><C-w>k
-imap <A-down> <ESC><C-w>j
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " learning
 map <up> <nop>
@@ -356,3 +352,5 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 nnoremap <leader>u :GundoToggle<CR>
 
 let g:UltiSnipsExpandTrigger="<s-tab>"
+
+nnoremap <leader>w <C-w>v<C-w>l
