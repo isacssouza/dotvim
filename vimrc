@@ -368,3 +368,6 @@ set background=dark
 colorscheme railscasts
 
 nnoremap <leader>w <C-w>v<C-w>l
+
+" save on focus lost and ignore untitled buffers
+:au FocusLost * silent! wa
