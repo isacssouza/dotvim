@@ -30,7 +30,7 @@
 	url = https://github.com/scrooloose/nerdcommenter
 [submodule "bundle/tabular.git"]
 	path = bundle/tabular.git
-	url = git://github.com/godlygeek/tabular.git
+	url = https://github.com/godlygeek/tabular.git
 [submodule "bundle/rainbow_parentheses.vim"]
 	path = bundle/rainbow_parentheses.vim
 	url = https://github.com/kien/rainbow_parentheses.vim
@@ -64,3 +64,6 @@
 [submodule "bundle/ack.vim.git"]
 	path = bundle/ack.vim.git
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/vim-colorschemes.git"]
+	path = bundle/vim-colorschemes.git
+	url = https://github.com/flazz/vim-colorschemes.git
