@@ -319,8 +319,9 @@ map <leader>jh :JSHint %<CR>
 
 " Syntastic
 
-" enable
+let g:syntastic_mode_map = { "mode": "passive" }
 let g:syntastic_check_on_open=0
+let g:syntastic_check_on_wq = 0
 " open error list
 let g:syntastic_auto_loc_list=1
 let g:syntastic_python_checkers = ['flake8']
